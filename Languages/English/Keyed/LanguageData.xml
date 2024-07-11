@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <TMA.MinimalAreas>Minimum number of areas to enable alternate view: {0}</TMA.MinimalAreas>
+  <TMA.AltToSwitch>Press the ALT-key to temporarily switch to the vanilla view of areas</TMA.AltToSwitch>
   <TMA.CurrentModVersion>Installed mod-version: {0}</TMA.CurrentModVersion>
 </LanguageData>

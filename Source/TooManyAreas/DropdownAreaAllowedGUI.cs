@@ -70,6 +70,7 @@ public static class DropdownAreaAllowedGUI
         Widgets.Label(contractedRect, text);
         Text.WordWrap = true;
         Text.Anchor = TextAnchor.UpperLeft;
+        TooltipHandler.TipRegion(rect, "TMA.AltToSwitch".Translate());
         return false;
     }
 }

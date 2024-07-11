@@ -1,4 +1,4 @@
-# [Too Many Areas (Continued)]()
+# [Too Many Areas (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3280480860)
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
@@ -30,3 +30,5 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=725153576
 -  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
 
+
+[![Image](https://img.shields.io/github/v/release/emipa606/TooManyAreas?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3280480860)

@@ -17,8 +17,13 @@ internal static class AreaAllowedGUI_DoAllowedAreaSelectors
         }
 
         var allAreas = Find.CurrentMap.areaManager.AllAreas;
-        return allAreas.Count(area => area.AssignableAsAllowed()) + 1 < TMAMod.Instance.Settings.transitionValue ||
-               DropdownAreaAllowedGUI.DrawBox(rect, p);
+        if (allAreas.Count(area => area.AssignableAsAllowed()) + 1 < TMAMod.Instance.Settings.transitionValue)
+        {
+            return true;
+        }
+
+        // If ALT is pressed, return to vanilla behavior
+        return Event.current.alt || DropdownAreaAllowedGUI.DrawBox(rect, p);
     }
 
     private static Exception Finalizer(Exception __exception)
