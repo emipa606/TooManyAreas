@@ -5,6 +5,7 @@
 Update of mr_chimicks mod https://steamcommunity.com/sharedfiles/filedetails/?id=2316018203
 
 - Added dropdown-indicator
+- The ALT key can now be pressed to temporarily show the vanilla interface
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 	
@@ -29,6 +30,6 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=725153576
 -  If you have the solution for a problem, please post it to the GitHub repository.
 -  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
-
-[![Image](https://img.shields.io/github/v/release/emipa606/TooManyAreas?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3280480860)
+[![Image](https://img.shields.io/github/v/release/emipa606/TooManyAreas?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3280480860) | tags: areas,  interface
