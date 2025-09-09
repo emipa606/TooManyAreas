@@ -14,18 +14,32 @@ public static class DropdownAreaAllowedGUI
                 delegate { pawn.playerSettings.AreaRestrictionInPawnCurrentMap = null; }),
             payload = null
         };
-        foreach (var area in Find.CurrentMap.areaManager.AllAreas)
+        var allAreas = Find.CurrentMap.areaManager.AllAreas;
+
+        foreach (var area in allAreas)
         {
             var a = area;
-            if (area != pawn.playerSettings.AreaRestrictionInPawnCurrentMap && area.AssignableAsAllowed())
+            if (area == pawn.playerSettings.AreaRestrictionInPawnCurrentMap)
             {
-                yield return new Widgets.DropdownMenuElement<Area>
-                {
-                    option = new FloatMenuOption(a.Label,
-                        delegate { pawn.playerSettings.AreaRestrictionInPawnCurrentMap = a; },
-                        MenuOptionPriority.Default, delegate { a.MarkForDraw(); }),
-                    payload = a
-                };
+                continue;
+            }
+
+            switch (HarmonyPatches.TdEnhancementPackLoaded)
+            {
+                case true when
+                    !(bool)HarmonyPatches.TdEnhancementPackAssignableAsAllowedForPawnMethodInfo.Invoke(null,
+                        [area, pawn]):
+                case false when !area.AssignableAsAllowed():
+                    continue;
+                default:
+                    yield return new Widgets.DropdownMenuElement<Area>
+                    {
+                        option = new FloatMenuOption(a.Label,
+                            delegate { pawn.playerSettings.AreaRestrictionInPawnCurrentMap = a; },
+                            MenuOptionPriority.Default, delegate { a.MarkForDraw(); }),
+                        payload = a
+                    };
+                    break;
             }
         }
     }

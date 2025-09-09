@@ -4,9 +4,15 @@
   "CanRemove": "0",
   "SocialImageSet": true,
   "PreviewVersion": "1.6",
-  "LastXmlCleaning": "2025-06-29T22:02:37.4085768+02:00",
+  "LastXmlCleaning": "2025-09-09T21:54:01.3180058+02:00",
   "SearchTags": [
     "areas",
     " interface"
-  ]
+  ],
+  "Patches": false,
+  "Defs": false,
+  "Assemblies": true,
+  "LinesOfCode": 8794,
+  "LinesOfXML": 0,
+  "CodeBaseSize": 61
 }
