@@ -56,9 +56,9 @@ public static class DropdownAreaAllowedGUI
                                  .AreaRestrictionInPawnCurrentMap);
         var texture2D = !hasRestriction
             ? BaseContent.GreyTex
-            : pawn.playerSettings.AreaRestrictionInPawnCurrentMap.ColorTexture;
+            : pawn.playerSettings.AreaRestrictionInPawnCurrentMap?.ColorTexture;
         var text = hasRestriction
-            ? pawn.playerSettings.AreaRestrictionInPawnCurrentMap.Label
+            ? pawn.playerSettings.AreaRestrictionInPawnCurrentMap?.Label
             : AreaUtility.AreaAllowedLabel_Area(null);
 
         var contractedRect = rect.ContractedBy(2f);
@@ -72,7 +72,7 @@ public static class DropdownAreaAllowedGUI
             GUI.DrawTexture(rect, BaseContent.WhiteTex);
             if (hasRestriction)
             {
-                pawn.playerSettings.AreaRestrictionInPawnCurrentMap.MarkForDraw();
+                pawn.playerSettings.AreaRestrictionInPawnCurrentMap?.MarkForDraw();
             }
         }
 

@@ -9,7 +9,7 @@ namespace TooManyAreas;
 [HarmonyPatch(typeof(AreaAllowedGUI), nameof(AreaAllowedGUI.DoAllowedAreaSelectors))]
 internal static class AreaAllowedGUI_DoAllowedAreaSelectors
 {
-    private static bool Prefix(Rect rect, Pawn p)
+    public static bool Prefix(Rect rect, Pawn p)
     {
         if (Find.CurrentMap == null || p.playerSettings == null)
         {
@@ -26,7 +26,7 @@ internal static class AreaAllowedGUI_DoAllowedAreaSelectors
         return Event.current.alt || DropdownAreaAllowedGUI.DrawBox(rect, p);
     }
 
-    private static Exception Finalizer(Exception __exception)
+    public static Exception Finalizer(Exception __exception)
     {
         return __exception is NullReferenceException ? null : __exception;
     }
